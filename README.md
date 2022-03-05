@@ -1,2 +1,2 @@
 # calculator
-Calculator. Created using React.
+Calculator. Created using JavaScript.
