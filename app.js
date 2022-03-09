@@ -107,6 +107,22 @@ equals.addEventListener("click", () => {
   }
 });
 
+// Function for deleting numbers in the entry
+const deleteItem = function () {
+  entryValue.pop();
+  display.value = entryValue.join("");
+};
+
+del.addEventListener("click", deleteItem);
+
+// Function for clearing the numbers in the entry
+const clearDisplay = function () {
+  entryValue = [];
+  display.value = entryValue.join("");
+};
+
+clear.addEventListener("click", clearDisplay);
+
 const validEntry = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const enterValue = function (e) {
   if (e.key in validEntry) {
@@ -118,13 +134,20 @@ const enterValue = function (e) {
       }
     }
   } else if (e.key == "Backspace") {
-    entryValue.pop();
-    display.value = entryValue.join("");
+    deleteItem();
+  } else if (e.key == "Escape") {
+    clearDisplay();
+  } else if (e.key == "Enter") {
+    equals.click();
+  } else if (e.key == "+") {
+    add.click();
+  } else if (e.key == "-") {
+    subtract.click();
+  } else if (e.key == "*") {
+    multiply.click();
+  } else if (e.key == "/") {
+    divide.click();
   }
 };
 
 window.addEventListener("keydown", enterValue);
-clear.addEventListener("click", () => {
-  entryValue = [];
-  display.value = entryValue.join("");
-});
