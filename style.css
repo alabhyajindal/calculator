@@ -29,6 +29,10 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-grow: 1;
 }
 
+.delete {
+  flex-grow: 1;
+}
+
 .divide {
   margin-left: auto;
 }
