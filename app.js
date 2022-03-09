@@ -41,6 +41,72 @@ numbers.forEach((e) =>
   })
 );
 
+// Defining global variables for calculation
+let firstNum;
+let operator;
+let secondNum;
+
+// Listening for the click event on operation buttons
+add.addEventListener("click", () => {
+  firstNum = parseInt(display.value);
+  operator = "add";
+  entryValue = [];
+  display.value = entryValue.join("");
+});
+
+subtract.addEventListener("click", () => {
+  firstNum = parseInt(display.value);
+  operator = "minus";
+  entryValue = [];
+  display.value = entryValue.join("");
+});
+
+multiply.addEventListener("click", () => {
+  firstNum = parseInt(display.value);
+  operator = "multiply";
+  entryValue = [];
+  display.value = entryValue.join("");
+});
+
+divide.addEventListener("click", () => {
+  firstNum = parseInt(display.value);
+  operator = "divide";
+  entryValue = [];
+  display.value = entryValue.join("");
+});
+
+// Defining the operator functions
+const addition = function (a, b) {
+  return a + b;
+};
+
+const subtraction = function (a, b) {
+  return a - b;
+};
+
+const multiplication = function (a, b) {
+  return a * b;
+};
+
+const division = function (a, b) {
+  return a / b;
+};
+
+// Calling the operator functions based on the sign clicked
+equals.addEventListener("click", () => {
+  secondNum = parseInt(display.value);
+  // display.value = firstNum + secondNum;
+  if (operator == "add") {
+    display.value = addition(firstNum, secondNum);
+  } else if (operator == "minus") {
+    display.value = subtraction(firstNum, secondNum);
+  } else if (operator == "multiply") {
+    display.value = multiplication(firstNum, secondNum);
+  } else if (operator == "divide") {
+    display.value = division(firstNum, secondNum);
+  }
+});
+
 const validEntry = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const enterValue = function (e) {
   if (e.key in validEntry) {
