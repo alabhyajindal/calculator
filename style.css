@@ -11,8 +11,34 @@ html {
 }
 
 .app {
-  max-width: 50rem;
+  max-width: 30rem;
   margin: 2rem auto;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.big-row {
+  display: flex;
+}
+
+.all-clear {
+  flex-grow: 1;
+}
+
+.divide {
+  margin-left: auto;
+}
+
+.equals {
+  margin-left: auto;
+}
+
+.zero {
+  flex-grow: 1;
 }
 
 .entry {
@@ -21,6 +47,7 @@ html {
   padding: 1rem;
   font-size: 2rem;
   outline: none;
+  text-align: right;
 }
 
 .input-row {

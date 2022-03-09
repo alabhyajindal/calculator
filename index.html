@@ -9,12 +9,11 @@
   </head>
   <body>
     <main class="app">
-      <input class="entry" />
-      <div class="input-row">
-        <button class="btn">AC</button>
-        <button class="btn">√x</button>
-        <button class="btn">%</button>
-        <button class="btn btn-action">÷</button>
+      <input class="entry" type="number" oninput="foo()" />
+      <div class="input-row big-row">
+        <button class="btn all-clear">AC</button>
+        <button class="btn delete">DEL</button>
+        <button class="btn btn-action divide">÷</button>
       </div>
       <div class="input-row">
         <button class="btn">7</button>
@@ -32,13 +31,12 @@
         <button class="btn">1</button>
         <button class="btn">2</button>
         <button class="btn">3</button>
-        <button class="btn btn-action">+</button>
+        <button class="btn btn-action add">+</button>
       </div>
-      <div class="input-row">
-        <button class="btn">0</button>
-        <button class="btn">.</button>
-        <button class="btn">+/-</button>
-        <button class="btn btn-action">=</button>
+      <div class="input-row big-row">
+        <button class="btn zero">0</button>
+        <button class="btn decimal">.</button>
+        <button class="btn btn-action equals">=</button>
       </div>
     </main>
     <script src="./app.js"></script>
