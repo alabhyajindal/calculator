@@ -62,8 +62,22 @@ input[type="number"]::-webkit-outer-spin-button {
   background: none;
   border: none;
   background-color: #ccc;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #bbb;
+}
+
+.btn:active {
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 .btn-action {
   background-color: orange;
+}
+
+.btn-action:hover {
+  background-color: darkorange;
 }
